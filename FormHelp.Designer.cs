@@ -88,6 +88,7 @@
             Controls.Add(label1);
             ForeColor = SystemColors.Control;
             Name = "FormHelp";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormHelp";
             ResumeLayout(false);
             PerformLayout();

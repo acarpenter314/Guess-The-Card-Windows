@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIntro));
             buttonEasy = new RadioButton();
             buttonMedium = new RadioButton();
             buttonHard = new RadioButton();
@@ -37,7 +38,9 @@
             label1 = new Label();
             groupBoxDifficulty = new GroupBox();
             buttonExit = new Button();
+            pictureBox1 = new PictureBox();
             groupBoxDifficulty.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // buttonEasy
@@ -158,6 +161,15 @@
             buttonExit.UseVisualStyleBackColor = false;
             buttonExit.Click += buttonExit_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(132, 129);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(175, 243);
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
             // FormIntro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -165,6 +177,7 @@
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(454, 651);
+            Controls.Add(pictureBox1);
             Controls.Add(buttonExit);
             Controls.Add(groupBoxDifficulty);
             Controls.Add(buttonHelp);
@@ -172,9 +185,11 @@
             Controls.Add(buttonSettings);
             Controls.Add(label1);
             Name = "FormIntro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormIntro";
             groupBoxDifficulty.ResumeLayout(false);
             groupBoxDifficulty.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +204,6 @@
         private Label label1;
         private GroupBox groupBoxDifficulty;
         private Button buttonExit;
+        private PictureBox pictureBox1;
     }
 }

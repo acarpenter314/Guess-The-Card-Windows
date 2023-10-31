@@ -32,6 +32,7 @@
             buttonMusicOnOff = new Button();
             label2 = new Label();
             label1 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // buttonBackSettings
@@ -71,11 +72,23 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(170, 98);
+            label1.Location = new Point(170, 166);
             label1.Name = "label1";
             label1.Size = new Size(100, 32);
             label1.TabIndex = 4;
             label1.Text = "Settings";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.ActiveCaptionText;
+            label3.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Lime;
+            label3.Location = new Point(70, 52);
+            label3.Name = "label3";
+            label3.Size = new Size(311, 59);
+            label3.TabIndex = 19;
+            label3.Text = "Guess the Card";
             // 
             // FormSettings
             // 
@@ -83,12 +96,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(454, 651);
+            Controls.Add(label3);
             Controls.Add(buttonBackSettings);
             Controls.Add(buttonMusicOnOff);
             Controls.Add(label2);
             Controls.Add(label1);
             ForeColor = SystemColors.ButtonHighlight;
             Name = "FormSettings";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormSettings";
             ResumeLayout(false);
             PerformLayout();
@@ -100,5 +115,6 @@
         private Button buttonMusicOnOff;
         private Label label2;
         private Label label1;
+        private Label label3;
     }
 }

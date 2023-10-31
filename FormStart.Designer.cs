@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
             radioButtonClubs = new RadioButton();
             radioButtonSpades = new RadioButton();
             radioButtonHearts = new RadioButton();
@@ -42,12 +43,22 @@
             radioButtonEight = new RadioButton();
             radioButtonNine = new RadioButton();
             radioButtonTen = new RadioButton();
-            pictureBox1 = new PictureBox();
+            pictureBoxCover = new PictureBox();
             groupBoxSuit = new GroupBox();
             groupBoxValue = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            label1 = new Label();
+            buttonExit = new Button();
+            buttonReveal = new Button();
+            labelWin = new Label();
+            labelLoss = new Label();
+            labelWinCount = new Label();
+            labelLossCount = new Label();
+            pictureBoxCard = new PictureBox();
+            buttonMainScreen = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCover).BeginInit();
             groupBoxSuit.SuspendLayout();
             groupBoxValue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCard).BeginInit();
             SuspendLayout();
             // 
             // radioButtonClubs
@@ -218,14 +229,17 @@
             radioButtonTen.Text = "Ten";
             radioButtonTen.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureBoxCover
             // 
-            pictureBox1.Image = Properties.Resources.cardback;
-            pictureBox1.Location = new Point(73, 33);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(308, 329);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
+            pictureBoxCover.BackgroundImageLayout = ImageLayout.Center;
+            pictureBoxCover.Cursor = Cursors.SizeNWSE;
+            pictureBoxCover.ErrorImage = Properties.Resources.cardback;
+            pictureBoxCover.Image = (Image)resources.GetObject("pictureBoxCover.Image");
+            pictureBoxCover.Location = new Point(133, 133);
+            pictureBoxCover.Name = "pictureBoxCover";
+            pictureBoxCover.Size = new Size(180, 247);
+            pictureBoxCover.TabIndex = 15;
+            pictureBoxCover.TabStop = false;
             // 
             // groupBoxSuit
             // 
@@ -262,23 +276,134 @@
             groupBoxValue.TabStop = false;
             groupBoxValue.Text = "Face Value";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ActiveCaptionText;
+            label1.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Lime;
+            label1.Location = new Point(70, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(311, 59);
+            label1.TabIndex = 18;
+            label1.Text = "Guess the Card";
+            // 
+            // buttonExit
+            // 
+            buttonExit.BackColor = SystemColors.ActiveCaptionText;
+            buttonExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonExit.ForeColor = SystemColors.ButtonFace;
+            buttonExit.Location = new Point(323, 604);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(81, 35);
+            buttonExit.TabIndex = 19;
+            buttonExit.Text = "Exit";
+            buttonExit.UseVisualStyleBackColor = false;
+            buttonExit.Click += buttonExit_Click;
+            // 
+            // buttonReveal
+            // 
+            buttonReveal.BackColor = SystemColors.ActiveCaptionText;
+            buttonReveal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonReveal.ForeColor = SystemColors.ButtonFace;
+            buttonReveal.Location = new Point(39, 604);
+            buttonReveal.Name = "buttonReveal";
+            buttonReveal.Size = new Size(81, 35);
+            buttonReveal.TabIndex = 20;
+            buttonReveal.Text = "Reveal";
+            buttonReveal.UseVisualStyleBackColor = false;
+            buttonReveal.Click += buttonReveal_Click;
+            // 
+            // labelWin
+            // 
+            labelWin.AutoSize = true;
+            labelWin.ForeColor = SystemColors.ButtonHighlight;
+            labelWin.Location = new Point(27, 9);
+            labelWin.Name = "labelWin";
+            labelWin.Size = new Size(28, 15);
+            labelWin.TabIndex = 21;
+            labelWin.Text = "Win";
+            // 
+            // labelLoss
+            // 
+            labelLoss.AutoSize = true;
+            labelLoss.ForeColor = SystemColors.ButtonHighlight;
+            labelLoss.Location = new Point(392, 9);
+            labelLoss.Name = "labelLoss";
+            labelLoss.Size = new Size(30, 15);
+            labelLoss.TabIndex = 22;
+            labelLoss.Text = "Loss";
+            // 
+            // labelWinCount
+            // 
+            labelWinCount.AutoSize = true;
+            labelWinCount.ForeColor = SystemColors.ButtonHighlight;
+            labelWinCount.Location = new Point(39, 33);
+            labelWinCount.Name = "labelWinCount";
+            labelWinCount.Size = new Size(0, 15);
+            labelWinCount.TabIndex = 23;
+            // 
+            // labelLossCount
+            // 
+            labelLossCount.AutoSize = true;
+            labelLossCount.ForeColor = SystemColors.ButtonHighlight;
+            labelLossCount.Location = new Point(404, 24);
+            labelLossCount.Name = "labelLossCount";
+            labelLossCount.Size = new Size(0, 15);
+            labelLossCount.TabIndex = 24;
+            // 
+            // pictureBoxCard
+            // 
+            pictureBoxCard.Enabled = false;
+            pictureBoxCard.Image = (Image)resources.GetObject("pictureBoxCard.Image");
+            pictureBoxCard.Location = new Point(136, 133);
+            pictureBoxCard.Name = "pictureBoxCard";
+            pictureBoxCard.Size = new Size(177, 244);
+            pictureBoxCard.TabIndex = 25;
+            pictureBoxCard.TabStop = false;
+            // 
+            // buttonMainScreen
+            // 
+            buttonMainScreen.BackColor = SystemColors.ActiveCaptionText;
+            buttonMainScreen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonMainScreen.ForeColor = SystemColors.ButtonFace;
+            buttonMainScreen.Location = new Point(165, 604);
+            buttonMainScreen.Name = "buttonMainScreen";
+            buttonMainScreen.Size = new Size(111, 35);
+            buttonMainScreen.TabIndex = 26;
+            buttonMainScreen.Text = "Main Screen";
+            buttonMainScreen.UseVisualStyleBackColor = false;
+            buttonMainScreen.Click += buttonMainScreen_Click;
+            // 
             // FormStart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(454, 651);
+            Controls.Add(buttonMainScreen);
+            Controls.Add(pictureBoxCard);
+            Controls.Add(labelLossCount);
+            Controls.Add(labelWinCount);
+            Controls.Add(labelLoss);
+            Controls.Add(labelWin);
+            Controls.Add(buttonReveal);
+            Controls.Add(buttonExit);
+            Controls.Add(label1);
             Controls.Add(groupBoxValue);
             Controls.Add(groupBoxSuit);
-            Controls.Add(pictureBox1);
+            Controls.Add(pictureBoxCover);
             Name = "FormStart";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormStart";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCover).EndInit();
             groupBoxSuit.ResumeLayout(false);
             groupBoxSuit.PerformLayout();
             groupBoxValue.ResumeLayout(false);
             groupBoxValue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCard).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -297,8 +422,17 @@
         private RadioButton radioButtonEight;
         private RadioButton radioButtonNine;
         private RadioButton radioButtonTen;
-        private PictureBox pictureBox1;
+        private PictureBox pictureBoxCover;
         private GroupBox groupBoxSuit;
         private GroupBox groupBoxValue;
+        private Label label1;
+        private Button buttonExit;
+        private Button buttonReveal;
+        private Label labelWin;
+        private Label labelLoss;
+        private Label labelWinCount;
+        private Label labelLossCount;
+        private PictureBox pictureBoxCard;
+        private Button buttonMainScreen;
     }
 }
