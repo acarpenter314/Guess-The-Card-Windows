@@ -235,7 +235,7 @@
             pictureBoxCover.Cursor = Cursors.SizeNWSE;
             pictureBoxCover.ErrorImage = Properties.Resources.cardback;
             pictureBoxCover.Image = (Image)resources.GetObject("pictureBoxCover.Image");
-            pictureBoxCover.Location = new Point(133, 133);
+            pictureBoxCover.Location = new Point(54, 133);
             pictureBoxCover.Name = "pictureBoxCover";
             pictureBoxCover.Size = new Size(180, 247);
             pictureBoxCover.TabIndex = 15;
@@ -356,11 +356,12 @@
             // 
             pictureBoxCard.Enabled = false;
             pictureBoxCard.Image = (Image)resources.GetObject("pictureBoxCard.Image");
-            pictureBoxCard.Location = new Point(136, 133);
+            pictureBoxCard.Location = new Point(231, 133);
             pictureBoxCard.Name = "pictureBoxCard";
-            pictureBoxCard.Size = new Size(177, 244);
+            pictureBoxCard.Size = new Size(180, 247);
             pictureBoxCard.TabIndex = 25;
             pictureBoxCard.TabStop = false;
+            pictureBoxCard.Click += pictureBoxCard_Click;
             // 
             // buttonMainScreen
             // 
