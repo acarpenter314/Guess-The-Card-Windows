@@ -38,7 +38,7 @@
             radioButtonThree = new RadioButton();
             radioButtonFour = new RadioButton();
             radioButtonFive = new RadioButton();
-            radioButtonSex = new RadioButton();
+            radioButtonSix = new RadioButton();
             radioButtonSeven = new RadioButton();
             radioButtonEight = new RadioButton();
             radioButtonNine = new RadioButton();
@@ -46,7 +46,6 @@
             pictureBoxCover = new PictureBox();
             groupBoxSuit = new GroupBox();
             groupBoxValue = new GroupBox();
-            label1 = new Label();
             buttonExit = new Button();
             buttonReveal = new Button();
             labelWin = new Label();
@@ -55,6 +54,7 @@
             labelLossCount = new Label();
             pictureBoxCard = new PictureBox();
             buttonMainScreen = new Button();
+            buttonPlayAgain = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCover).BeginInit();
             groupBoxSuit.SuspendLayout();
             groupBoxValue.SuspendLayout();
@@ -169,17 +169,17 @@
             radioButtonFive.Text = "Five";
             radioButtonFive.UseVisualStyleBackColor = true;
             // 
-            // radioButtonSex
+            // radioButtonSix
             // 
-            radioButtonSex.AutoSize = true;
-            radioButtonSex.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonSex.Location = new Point(123, 15);
-            radioButtonSex.Name = "radioButtonSex";
-            radioButtonSex.Size = new Size(40, 19);
-            radioButtonSex.TabIndex = 10;
-            radioButtonSex.TabStop = true;
-            radioButtonSex.Text = "Six";
-            radioButtonSex.UseVisualStyleBackColor = true;
+            radioButtonSix.AutoSize = true;
+            radioButtonSix.ForeColor = SystemColors.ButtonHighlight;
+            radioButtonSix.Location = new Point(123, 15);
+            radioButtonSix.Name = "radioButtonSix";
+            radioButtonSix.Size = new Size(40, 19);
+            radioButtonSix.TabIndex = 10;
+            radioButtonSix.TabStop = true;
+            radioButtonSix.Text = "Six";
+            radioButtonSix.UseVisualStyleBackColor = true;
             // 
             // radioButtonSeven
             // 
@@ -233,13 +233,14 @@
             // 
             pictureBoxCover.BackgroundImageLayout = ImageLayout.Center;
             pictureBoxCover.Cursor = Cursors.SizeNWSE;
-            pictureBoxCover.ErrorImage = Properties.Resources.cardback;
             pictureBoxCover.Image = (Image)resources.GetObject("pictureBoxCover.Image");
-            pictureBoxCover.Location = new Point(54, 133);
+            pictureBoxCover.InitialImage = Properties.Resources.cardback;
+            pictureBoxCover.Location = new Point(73, 45);
             pictureBoxCover.Name = "pictureBoxCover";
-            pictureBoxCover.Size = new Size(180, 247);
+            pictureBoxCover.Size = new Size(173, 247);
             pictureBoxCover.TabIndex = 15;
             pictureBoxCover.TabStop = false;
+            pictureBoxCover.WaitOnLoad = true;
             // 
             // groupBoxSuit
             // 
@@ -248,13 +249,12 @@
             groupBoxSuit.Controls.Add(radioButtonSpades);
             groupBoxSuit.Controls.Add(radioButtonClubs);
             groupBoxSuit.ForeColor = SystemColors.ButtonHighlight;
-            groupBoxSuit.Location = new Point(54, 397);
+            groupBoxSuit.Location = new Point(11, 294);
             groupBoxSuit.Name = "groupBoxSuit";
             groupBoxSuit.Size = new Size(121, 187);
             groupBoxSuit.TabIndex = 16;
             groupBoxSuit.TabStop = false;
             groupBoxSuit.Text = "Suit";
-            groupBoxSuit.Enter += groupBoxSuit_Enter;
             // 
             // groupBoxValue
             // 
@@ -262,40 +262,28 @@
             groupBoxValue.Controls.Add(radioButtonNine);
             groupBoxValue.Controls.Add(radioButtonEight);
             groupBoxValue.Controls.Add(radioButtonSeven);
-            groupBoxValue.Controls.Add(radioButtonSex);
+            groupBoxValue.Controls.Add(radioButtonSix);
             groupBoxValue.Controls.Add(radioButtonFive);
             groupBoxValue.Controls.Add(radioButtonFour);
             groupBoxValue.Controls.Add(radioButtonThree);
             groupBoxValue.Controls.Add(radioButtonTwo);
             groupBoxValue.Controls.Add(radioButtonAce);
             groupBoxValue.ForeColor = SystemColors.ButtonHighlight;
-            groupBoxValue.Location = new Point(218, 397);
+            groupBoxValue.Location = new Point(138, 294);
             groupBoxValue.Name = "groupBoxValue";
             groupBoxValue.Size = new Size(186, 187);
             groupBoxValue.TabIndex = 17;
             groupBoxValue.TabStop = false;
             groupBoxValue.Text = "Face Value";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ActiveCaptionText;
-            label1.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Lime;
-            label1.Location = new Point(70, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(311, 59);
-            label1.TabIndex = 18;
-            label1.Text = "Guess the Card";
-            // 
             // buttonExit
             // 
             buttonExit.BackColor = SystemColors.ActiveCaptionText;
             buttonExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonExit.ForeColor = SystemColors.ButtonFace;
-            buttonExit.Location = new Point(323, 604);
+            buttonExit.Location = new Point(191, 539);
             buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(81, 35);
+            buttonExit.Size = new Size(108, 45);
             buttonExit.TabIndex = 19;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = false;
@@ -306,9 +294,9 @@
             buttonReveal.BackColor = SystemColors.ActiveCaptionText;
             buttonReveal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonReveal.ForeColor = SystemColors.ButtonFace;
-            buttonReveal.Location = new Point(39, 604);
+            buttonReveal.Location = new Point(80, 484);
             buttonReveal.Name = "buttonReveal";
-            buttonReveal.Size = new Size(81, 35);
+            buttonReveal.Size = new Size(173, 53);
             buttonReveal.TabIndex = 20;
             buttonReveal.Text = "Reveal";
             buttonReveal.UseVisualStyleBackColor = false;
@@ -318,7 +306,7 @@
             // 
             labelWin.AutoSize = true;
             labelWin.ForeColor = SystemColors.ButtonHighlight;
-            labelWin.Location = new Point(27, 9);
+            labelWin.Location = new Point(108, 8);
             labelWin.Name = "labelWin";
             labelWin.Size = new Size(28, 15);
             labelWin.TabIndex = 21;
@@ -328,7 +316,7 @@
             // 
             labelLoss.AutoSize = true;
             labelLoss.ForeColor = SystemColors.ButtonHighlight;
-            labelLoss.Location = new Point(392, 9);
+            labelLoss.Location = new Point(174, 8);
             labelLoss.Name = "labelLoss";
             labelLoss.Size = new Size(30, 15);
             labelLoss.TabIndex = 22;
@@ -338,7 +326,7 @@
             // 
             labelWinCount.AutoSize = true;
             labelWinCount.ForeColor = SystemColors.ButtonHighlight;
-            labelWinCount.Location = new Point(39, 33);
+            labelWinCount.Location = new Point(120, 23);
             labelWinCount.Name = "labelWinCount";
             labelWinCount.Size = new Size(0, 15);
             labelWinCount.TabIndex = 23;
@@ -347,7 +335,8 @@
             // 
             labelLossCount.AutoSize = true;
             labelLossCount.ForeColor = SystemColors.ButtonHighlight;
-            labelLossCount.Location = new Point(404, 24);
+            labelLossCount.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
+            labelLossCount.Location = new Point(187, 27);
             labelLossCount.Name = "labelLossCount";
             labelLossCount.Size = new Size(0, 15);
             labelLossCount.TabIndex = 24;
@@ -355,33 +344,50 @@
             // pictureBoxCard
             // 
             pictureBoxCard.Enabled = false;
-            pictureBoxCard.Image = (Image)resources.GetObject("pictureBoxCard.Image");
-            pictureBoxCard.Location = new Point(231, 133);
+            pictureBoxCard.ErrorImage = null;
+            pictureBoxCard.ImageLocation = "";
+            pictureBoxCard.InitialImage = null;
+            pictureBoxCard.Location = new Point(73, 45);
             pictureBoxCard.Name = "pictureBoxCard";
             pictureBoxCard.Size = new Size(180, 247);
             pictureBoxCard.TabIndex = 25;
             pictureBoxCard.TabStop = false;
-            pictureBoxCard.Click += pictureBoxCard_Click;
+            pictureBoxCard.Visible = false;
             // 
             // buttonMainScreen
             // 
             buttonMainScreen.BackColor = SystemColors.ActiveCaptionText;
             buttonMainScreen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMainScreen.ForeColor = SystemColors.ButtonFace;
-            buttonMainScreen.Location = new Point(165, 604);
+            buttonMainScreen.Location = new Point(11, 539);
             buttonMainScreen.Name = "buttonMainScreen";
-            buttonMainScreen.Size = new Size(111, 35);
+            buttonMainScreen.Size = new Size(137, 45);
             buttonMainScreen.TabIndex = 26;
             buttonMainScreen.Text = "Main Screen";
             buttonMainScreen.UseVisualStyleBackColor = false;
             buttonMainScreen.Click += buttonMainScreen_Click;
+            // 
+            // buttonPlayAgain
+            // 
+            buttonPlayAgain.BackColor = SystemColors.ActiveCaptionText;
+            buttonPlayAgain.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonPlayAgain.ForeColor = SystemColors.ButtonFace;
+            buttonPlayAgain.Location = new Point(80, 484);
+            buttonPlayAgain.Name = "buttonPlayAgain";
+            buttonPlayAgain.Size = new Size(173, 53);
+            buttonPlayAgain.TabIndex = 27;
+            buttonPlayAgain.Text = "Play Again?";
+            buttonPlayAgain.UseVisualStyleBackColor = false;
+            buttonPlayAgain.Visible = false;
+            buttonPlayAgain.Click += buttonPlayAgain_Click;
             // 
             // FormStart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(454, 651);
+            ClientSize = new Size(334, 590);
+            Controls.Add(buttonPlayAgain);
             Controls.Add(buttonMainScreen);
             Controls.Add(pictureBoxCard);
             Controls.Add(labelLossCount);
@@ -390,7 +396,6 @@
             Controls.Add(labelWin);
             Controls.Add(buttonReveal);
             Controls.Add(buttonExit);
-            Controls.Add(label1);
             Controls.Add(groupBoxValue);
             Controls.Add(groupBoxSuit);
             Controls.Add(pictureBoxCover);
@@ -418,7 +423,7 @@
         private RadioButton radioButtonThree;
         private RadioButton radioButtonFour;
         private RadioButton radioButtonFive;
-        private RadioButton radioButtonSex;
+        private RadioButton radioButtonSix;
         private RadioButton radioButtonSeven;
         private RadioButton radioButtonEight;
         private RadioButton radioButtonNine;
@@ -426,14 +431,14 @@
         private PictureBox pictureBoxCover;
         private GroupBox groupBoxSuit;
         private GroupBox groupBoxValue;
-        private Label label1;
         private Button buttonExit;
         private Button buttonReveal;
         private Label labelWin;
         private Label labelLoss;
-        private Label labelWinCount;
-        private Label labelLossCount;
         private PictureBox pictureBoxCard;
         private Button buttonMainScreen;
+        private Button buttonPlayAgain;
+        public Label labelWinCount;
+        public Label labelLossCount;
     }
 }

@@ -39,7 +39,7 @@
             // 
             buttonBackSettings.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             buttonBackSettings.ForeColor = SystemColors.ActiveCaptionText;
-            buttonBackSettings.Location = new Point(186, 438);
+            buttonBackSettings.Location = new Point(110, 356);
             buttonBackSettings.Name = "buttonBackSettings";
             buttonBackSettings.Size = new Size(84, 47);
             buttonBackSettings.TabIndex = 7;
@@ -51,7 +51,7 @@
             // 
             buttonMusicOnOff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMusicOnOff.ForeColor = SystemColors.ActiveCaptionText;
-            buttonMusicOnOff.Location = new Point(198, 324);
+            buttonMusicOnOff.Location = new Point(124, 280);
             buttonMusicOnOff.Name = "buttonMusicOnOff";
             buttonMusicOnOff.Size = new Size(60, 30);
             buttonMusicOnOff.TabIndex = 6;
@@ -62,7 +62,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(155, 261);
+            label2.Location = new Point(81, 217);
             label2.Name = "label2";
             label2.Size = new Size(144, 30);
             label2.TabIndex = 5;
@@ -72,7 +72,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(170, 166);
+            label1.Location = new Point(105, 142);
             label1.Name = "label1";
             label1.Size = new Size(100, 32);
             label1.TabIndex = 4;
@@ -84,7 +84,7 @@
             label3.BackColor = SystemColors.ActiveCaptionText;
             label3.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Lime;
-            label3.Location = new Point(70, 52);
+            label3.Location = new Point(-1, 22);
             label3.Name = "label3";
             label3.Size = new Size(311, 59);
             label3.TabIndex = 19;
@@ -95,7 +95,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(454, 651);
+            ClientSize = new Size(303, 419);
             Controls.Add(label3);
             Controls.Add(buttonBackSettings);
             Controls.Add(buttonMusicOnOff);

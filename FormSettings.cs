@@ -19,10 +19,10 @@ namespace Guess_The_Card
 
         private void buttonBackSettings_Click(object sender, EventArgs e)
         {
-            Guess_The_Card.FormIntro myForm = new FormIntro(); // Create the new form object
+            FormIntro myForm = new FormIntro(); // Create the new form object
             this.Hide(); // Hide the old form
             myForm.ShowDialog(); // Show the new form
-            this.Close(); // Close the old form
+            //this.Close(); // Close the old form
         }
     }
 }

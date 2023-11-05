@@ -87,7 +87,7 @@
             buttonSettings.BackColor = SystemColors.ActiveCaptionText;
             buttonSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonSettings.ForeColor = SystemColors.ButtonFace;
-            buttonSettings.Location = new Point(93, 478);
+            buttonSettings.Location = new Point(29, 433);
             buttonSettings.Name = "buttonSettings";
             buttonSettings.Size = new Size(82, 35);
             buttonSettings.TabIndex = 5;
@@ -100,7 +100,7 @@
             buttonStart.BackColor = SystemColors.ActiveCaptionText;
             buttonStart.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonStart.ForeColor = SystemColors.ButtonFace;
-            buttonStart.Location = new Point(93, 548);
+            buttonStart.Location = new Point(29, 491);
             buttonStart.Name = "buttonStart";
             buttonStart.Size = new Size(81, 35);
             buttonStart.TabIndex = 6;
@@ -113,7 +113,7 @@
             buttonHelp.BackColor = SystemColors.ActiveCaptionText;
             buttonHelp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonHelp.ForeColor = SystemColors.ButtonFace;
-            buttonHelp.Location = new Point(273, 478);
+            buttonHelp.Location = new Point(209, 435);
             buttonHelp.Name = "buttonHelp";
             buttonHelp.Size = new Size(75, 35);
             buttonHelp.TabIndex = 7;
@@ -127,7 +127,7 @@
             label1.BackColor = SystemColors.ActiveCaptionText;
             label1.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Lime;
-            label1.Location = new Point(70, 52);
+            label1.Location = new Point(-2, 9);
             label1.Name = "label1";
             label1.Size = new Size(311, 59);
             label1.TabIndex = 0;
@@ -140,7 +140,7 @@
             groupBoxDifficulty.Controls.Add(buttonEasy);
             groupBoxDifficulty.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             groupBoxDifficulty.ForeColor = SystemColors.ButtonHighlight;
-            groupBoxDifficulty.Location = new Point(79, 388);
+            groupBoxDifficulty.Location = new Point(15, 350);
             groupBoxDifficulty.Name = "groupBoxDifficulty";
             groupBoxDifficulty.Size = new Size(280, 53);
             groupBoxDifficulty.TabIndex = 8;
@@ -153,7 +153,7 @@
             buttonExit.BackColor = SystemColors.ActiveCaptionText;
             buttonExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonExit.ForeColor = SystemColors.ButtonFace;
-            buttonExit.Location = new Point(273, 548);
+            buttonExit.Location = new Point(204, 491);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(81, 35);
             buttonExit.TabIndex = 9;
@@ -164,7 +164,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(132, 129);
+            pictureBox1.Location = new Point(73, 85);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(175, 243);
             pictureBox1.TabIndex = 16;
@@ -176,7 +176,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(454, 651);
+            ClientSize = new Size(309, 531);
             Controls.Add(pictureBox1);
             Controls.Add(buttonExit);
             Controls.Add(groupBoxDifficulty);
