@@ -38,7 +38,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(172, 35);
+            label1.Location = new Point(119, 9);
             label1.Name = "label1";
             label1.Size = new Size(73, 37);
             label1.TabIndex = 0;
@@ -48,17 +48,17 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(65, 142);
+            label2.Location = new Point(-1, 57);
             label2.Name = "label2";
-            label2.Size = new Size(314, 42);
+            label2.Size = new Size(317, 42);
             label2.TabIndex = 1;
-            label2.Text = "the object of the game is to guess what card\r\n the dealer is holding.";
+            label2.Text = "The object of the game is to guess what card\r\nthe dealer is holding.";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(65, 260);
+            label3.Location = new Point(-1, 118);
             label3.Name = "label3";
             label3.Size = new Size(324, 147);
             label3.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             buttonBackHelp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonBackHelp.ForeColor = SystemColors.ActiveCaptionText;
-            buttonBackHelp.Location = new Point(184, 481);
+            buttonBackHelp.Location = new Point(119, 288);
             buttonBackHelp.Name = "buttonBackHelp";
             buttonBackHelp.Size = new Size(75, 30);
             buttonBackHelp.TabIndex = 3;
@@ -81,13 +81,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(454, 651);
+            ClientSize = new Size(325, 322);
             Controls.Add(buttonBackHelp);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             ForeColor = SystemColors.Control;
             Name = "FormHelp";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormHelp";
             ResumeLayout(false);
             PerformLayout();
