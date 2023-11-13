@@ -8,7 +8,7 @@ namespace Guess_The_Card
         {
             InitializeComponent();
         }
-
+        // Declare variables
         public static int difficulty;
         public static int winCount = 0;
         public static int lossCount = 0;
@@ -29,7 +29,7 @@ namespace Guess_The_Card
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-
+            // Check what difficulty the player picks
             if (buttonEasy.Checked == true)
             {
                 difficulty = 0;
@@ -54,11 +54,6 @@ namespace Guess_The_Card
                 this.Hide(); // Hide the old form
                 myForm.ShowDialog(); // Show the new form
             }
-        }
-
-        private void groupBoxDifficulty_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

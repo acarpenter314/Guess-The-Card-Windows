@@ -77,7 +77,7 @@
             // 
             radioButtonSpades.AutoSize = true;
             radioButtonSpades.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonSpades.Location = new Point(26, 64);
+            radioButtonSpades.Location = new Point(26, 49);
             radioButtonSpades.Name = "radioButtonSpades";
             radioButtonSpades.Size = new Size(62, 19);
             radioButtonSpades.TabIndex = 1;
@@ -89,7 +89,7 @@
             // 
             radioButtonHearts.AutoSize = true;
             radioButtonHearts.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonHearts.Location = new Point(26, 108);
+            radioButtonHearts.Location = new Point(94, 49);
             radioButtonHearts.Name = "radioButtonHearts";
             radioButtonHearts.Size = new Size(59, 19);
             radioButtonHearts.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             radioButtonDiamonds.AutoSize = true;
             radioButtonDiamonds.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonDiamonds.Location = new Point(26, 147);
+            radioButtonDiamonds.Location = new Point(94, 24);
             radioButtonDiamonds.Name = "radioButtonDiamonds";
             radioButtonDiamonds.Size = new Size(79, 19);
             radioButtonDiamonds.TabIndex = 3;
@@ -125,7 +125,7 @@
             // 
             radioButtonTwo.AutoSize = true;
             radioButtonTwo.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonTwo.Location = new Point(12, 49);
+            radioButtonTwo.Location = new Point(13, 32);
             radioButtonTwo.Name = "radioButtonTwo";
             radioButtonTwo.Size = new Size(46, 19);
             radioButtonTwo.TabIndex = 6;
@@ -137,7 +137,7 @@
             // 
             radioButtonThree.AutoSize = true;
             radioButtonThree.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonThree.Location = new Point(12, 90);
+            radioButtonThree.Location = new Point(13, 49);
             radioButtonThree.Name = "radioButtonThree";
             radioButtonThree.Size = new Size(54, 19);
             radioButtonThree.TabIndex = 7;
@@ -149,7 +149,7 @@
             // 
             radioButtonFour.AutoSize = true;
             radioButtonFour.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonFour.Location = new Point(13, 127);
+            radioButtonFour.Location = new Point(65, 15);
             radioButtonFour.Name = "radioButtonFour";
             radioButtonFour.Size = new Size(49, 19);
             radioButtonFour.TabIndex = 8;
@@ -161,7 +161,7 @@
             // 
             radioButtonFive.AutoSize = true;
             radioButtonFive.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonFive.Location = new Point(13, 162);
+            radioButtonFive.Location = new Point(65, 32);
             radioButtonFive.Name = "radioButtonFive";
             radioButtonFive.Size = new Size(46, 19);
             radioButtonFive.TabIndex = 9;
@@ -173,7 +173,7 @@
             // 
             radioButtonSix.AutoSize = true;
             radioButtonSix.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonSix.Location = new Point(123, 15);
+            radioButtonSix.Location = new Point(65, 49);
             radioButtonSix.Name = "radioButtonSix";
             radioButtonSix.Size = new Size(40, 19);
             radioButtonSix.TabIndex = 10;
@@ -185,7 +185,7 @@
             // 
             radioButtonSeven.AutoSize = true;
             radioButtonSeven.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonSeven.Location = new Point(123, 49);
+            radioButtonSeven.Location = new Point(117, 15);
             radioButtonSeven.Name = "radioButtonSeven";
             radioButtonSeven.Size = new Size(56, 19);
             radioButtonSeven.TabIndex = 11;
@@ -197,7 +197,7 @@
             // 
             radioButtonEight.AutoSize = true;
             radioButtonEight.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonEight.Location = new Point(123, 90);
+            radioButtonEight.Location = new Point(117, 32);
             radioButtonEight.Name = "radioButtonEight";
             radioButtonEight.Size = new Size(52, 19);
             radioButtonEight.TabIndex = 12;
@@ -209,7 +209,7 @@
             // 
             radioButtonNine.AutoSize = true;
             radioButtonNine.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonNine.Location = new Point(123, 127);
+            radioButtonNine.Location = new Point(117, 49);
             radioButtonNine.Name = "radioButtonNine";
             radioButtonNine.Size = new Size(50, 19);
             radioButtonNine.TabIndex = 13;
@@ -221,7 +221,7 @@
             // 
             radioButtonTen.AutoSize = true;
             radioButtonTen.ForeColor = SystemColors.ButtonHighlight;
-            radioButtonTen.Location = new Point(123, 162);
+            radioButtonTen.Location = new Point(179, 15);
             radioButtonTen.Name = "radioButtonTen";
             radioButtonTen.Size = new Size(43, 19);
             radioButtonTen.TabIndex = 14;
@@ -234,7 +234,6 @@
             pictureBoxCover.BackgroundImageLayout = ImageLayout.Center;
             pictureBoxCover.Cursor = Cursors.SizeNWSE;
             pictureBoxCover.Image = (Image)resources.GetObject("pictureBoxCover.Image");
-            pictureBoxCover.InitialImage = Properties.Resources.cardback;
             pictureBoxCover.Location = new Point(73, 45);
             pictureBoxCover.Name = "pictureBoxCover";
             pictureBoxCover.Size = new Size(173, 247);
@@ -249,9 +248,9 @@
             groupBoxSuit.Controls.Add(radioButtonSpades);
             groupBoxSuit.Controls.Add(radioButtonClubs);
             groupBoxSuit.ForeColor = SystemColors.ButtonHighlight;
-            groupBoxSuit.Location = new Point(11, 294);
+            groupBoxSuit.Location = new Point(73, 298);
             groupBoxSuit.Name = "groupBoxSuit";
-            groupBoxSuit.Size = new Size(121, 187);
+            groupBoxSuit.Size = new Size(183, 79);
             groupBoxSuit.TabIndex = 16;
             groupBoxSuit.TabStop = false;
             groupBoxSuit.Text = "Suit";
@@ -269,9 +268,9 @@
             groupBoxValue.Controls.Add(radioButtonTwo);
             groupBoxValue.Controls.Add(radioButtonAce);
             groupBoxValue.ForeColor = SystemColors.ButtonHighlight;
-            groupBoxValue.Location = new Point(138, 294);
+            groupBoxValue.Location = new Point(55, 383);
             groupBoxValue.Name = "groupBoxValue";
-            groupBoxValue.Size = new Size(186, 187);
+            groupBoxValue.Size = new Size(225, 74);
             groupBoxValue.TabIndex = 17;
             groupBoxValue.TabStop = false;
             groupBoxValue.Text = "Face Value";
@@ -281,7 +280,7 @@
             buttonExit.BackColor = SystemColors.ActiveCaptionText;
             buttonExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonExit.ForeColor = SystemColors.ButtonFace;
-            buttonExit.Location = new Point(191, 539);
+            buttonExit.Location = new Point(174, 533);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(108, 45);
             buttonExit.TabIndex = 19;
@@ -294,7 +293,7 @@
             buttonReveal.BackColor = SystemColors.ActiveCaptionText;
             buttonReveal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonReveal.ForeColor = SystemColors.ButtonFace;
-            buttonReveal.Location = new Point(80, 484);
+            buttonReveal.Location = new Point(80, 474);
             buttonReveal.Name = "buttonReveal";
             buttonReveal.Size = new Size(173, 53);
             buttonReveal.TabIndex = 20;
@@ -359,9 +358,9 @@
             buttonMainScreen.BackColor = SystemColors.ActiveCaptionText;
             buttonMainScreen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMainScreen.ForeColor = SystemColors.ButtonFace;
-            buttonMainScreen.Location = new Point(11, 539);
+            buttonMainScreen.Location = new Point(55, 533);
             buttonMainScreen.Name = "buttonMainScreen";
-            buttonMainScreen.Size = new Size(137, 45);
+            buttonMainScreen.Size = new Size(112, 45);
             buttonMainScreen.TabIndex = 26;
             buttonMainScreen.Text = "Main Screen";
             buttonMainScreen.UseVisualStyleBackColor = false;
@@ -372,7 +371,7 @@
             buttonPlayAgain.BackColor = SystemColors.ActiveCaptionText;
             buttonPlayAgain.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonPlayAgain.ForeColor = SystemColors.ButtonFace;
-            buttonPlayAgain.Location = new Point(80, 484);
+            buttonPlayAgain.Location = new Point(80, 474);
             buttonPlayAgain.Name = "buttonPlayAgain";
             buttonPlayAgain.Size = new Size(173, 53);
             buttonPlayAgain.TabIndex = 27;

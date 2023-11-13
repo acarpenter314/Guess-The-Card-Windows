@@ -74,10 +74,6 @@ namespace Guess_The_Card
                 groupBoxValue.Visible = true;
             }
 
-
-            //MessageBox.Show(Convert.ToString(dealerCard));
-
-
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -91,7 +87,6 @@ namespace Guess_The_Card
             // Assign a random image to pictureBoxCard
             pictureBoxCard.Image = Image.FromFile($"../../../Cards/{dealerCard}");
             pictureBoxCover.Visible = false; // Hide picturebox
-            Thread.Sleep(300); // Delay 
             pictureBoxCard.Visible = true; // Show picturebox
 
             // Check which radiobutton has been checked for Easy difficulty

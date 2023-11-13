@@ -61,7 +61,7 @@
             buttonMedium.AutoSize = true;
             buttonMedium.BackColor = SystemColors.ActiveCaptionText;
             buttonMedium.ForeColor = SystemColors.ButtonFace;
-            buttonMedium.Location = new Point(88, 22);
+            buttonMedium.Location = new Point(78, 22);
             buttonMedium.Name = "buttonMedium";
             buttonMedium.Size = new Size(100, 29);
             buttonMedium.TabIndex = 3;
@@ -74,7 +74,7 @@
             buttonHard.AutoSize = true;
             buttonHard.BackColor = SystemColors.ActiveCaptionText;
             buttonHard.ForeColor = SystemColors.ButtonFace;
-            buttonHard.Location = new Point(194, 22);
+            buttonHard.Location = new Point(175, 22);
             buttonHard.Name = "buttonHard";
             buttonHard.Size = new Size(71, 29);
             buttonHard.TabIndex = 4;
@@ -87,7 +87,7 @@
             buttonSettings.BackColor = SystemColors.ActiveCaptionText;
             buttonSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonSettings.ForeColor = SystemColors.ButtonFace;
-            buttonSettings.Location = new Point(29, 433);
+            buttonSettings.Location = new Point(29, 473);
             buttonSettings.Name = "buttonSettings";
             buttonSettings.Size = new Size(82, 35);
             buttonSettings.TabIndex = 5;
@@ -100,9 +100,9 @@
             buttonStart.BackColor = SystemColors.ActiveCaptionText;
             buttonStart.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonStart.ForeColor = SystemColors.ButtonFace;
-            buttonStart.Location = new Point(29, 491);
+            buttonStart.Location = new Point(29, 423);
             buttonStart.Name = "buttonStart";
-            buttonStart.Size = new Size(81, 35);
+            buttonStart.Size = new Size(82, 35);
             buttonStart.TabIndex = 6;
             buttonStart.Text = "Start";
             buttonStart.UseVisualStyleBackColor = false;
@@ -113,9 +113,9 @@
             buttonHelp.BackColor = SystemColors.ActiveCaptionText;
             buttonHelp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonHelp.ForeColor = SystemColors.ButtonFace;
-            buttonHelp.Location = new Point(209, 435);
+            buttonHelp.Location = new Point(198, 423);
             buttonHelp.Name = "buttonHelp";
-            buttonHelp.Size = new Size(75, 35);
+            buttonHelp.Size = new Size(82, 35);
             buttonHelp.TabIndex = 7;
             buttonHelp.Text = "Help";
             buttonHelp.UseVisualStyleBackColor = false;
@@ -140,22 +140,21 @@
             groupBoxDifficulty.Controls.Add(buttonEasy);
             groupBoxDifficulty.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             groupBoxDifficulty.ForeColor = SystemColors.ButtonHighlight;
-            groupBoxDifficulty.Location = new Point(15, 350);
+            groupBoxDifficulty.Location = new Point(29, 352);
             groupBoxDifficulty.Name = "groupBoxDifficulty";
-            groupBoxDifficulty.Size = new Size(280, 53);
+            groupBoxDifficulty.Size = new Size(251, 53);
             groupBoxDifficulty.TabIndex = 8;
             groupBoxDifficulty.TabStop = false;
             groupBoxDifficulty.Text = "Difficulty Level";
-            groupBoxDifficulty.Enter += groupBoxDifficulty_Enter;
             // 
             // buttonExit
             // 
             buttonExit.BackColor = SystemColors.ActiveCaptionText;
             buttonExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonExit.ForeColor = SystemColors.ButtonFace;
-            buttonExit.Location = new Point(204, 491);
+            buttonExit.Location = new Point(198, 473);
             buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(81, 35);
+            buttonExit.Size = new Size(82, 35);
             buttonExit.TabIndex = 9;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = false;

@@ -22,7 +22,6 @@ namespace Guess_The_Card
             FormIntro myForm = new FormIntro(); // Create the new form object
             this.Hide(); // Hide the old form
             myForm.ShowDialog(); // Show the new form
-            //this.Close(); // Close the old form
         }
     }
 }
