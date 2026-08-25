@@ -65,13 +65,9 @@ Project Structure
 -----------------
 
 Guess-The-Card-Windows/
-
 |
-
 |-- Cards/                 # Card images (suits, values, full deck)
-
 |
-
 |-- FormIntro.cs           # Main menu + difficulty selection
 |-- FormStart.cs           # Game logic + card reveal
 |-- FormSettings.cs        # Settings screen
