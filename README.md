@@ -61,17 +61,20 @@ PNG card assets
 
 ## Project Structure
 
+Project Structure
+-----------------
+
 Guess-The-Card-Windows/
-โ
-โโโ Cards/                 # Card images (suits, values, full deck)
-โ
-โโโ FormIntro.cs           # Main menu + difficulty selection
-โโโ FormStart.cs           # Game logic + card reveal
-โโโ FormSettings.cs        # Settings screen
-โโโ FormHelp.cs            # Help screen
-โโโ Program.cs             # Application entry point
-โ
-โโโ README.md              # Project documentation
+|
+|-- Cards/                 # Card images (suits, values, full deck)
+|
+|-- FormIntro.cs           # Main menu + difficulty selection
+|-- FormStart.cs           # Game logic + card reveal
+|-- FormSettings.cs        # Settings screen
+|-- FormHelp.cs            # Help screen
+|-- Program.cs             # Application entry point
+|
+`-- README.md              # Project documentation
 
 
 If you want a diagram-style project map, I can generate one:
