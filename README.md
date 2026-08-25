@@ -49,17 +49,16 @@ If you want, I can help you design a screenshot layout.
 
 
 
-## ๐ ๏ธ Tech Stack
+## Tech Stack
 
-โข C#
-โข .NET 6 / WinForms
-โข Visual Studio
-โข PNG card assets
+ C#
+ .NET 6 / WinForms
+ Visual Studio
+ PNG card assets
 
 
----
 
-## ๐ Project Structure
+## Project Structure
 
 Guess-The-Card-Windows/
 โ
