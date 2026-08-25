@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace GuessTheCard
+namespace Guess_The_Card
 {
     public class SpriteSheetLoader
     {
@@ -11,6 +11,7 @@ namespace GuessTheCard
         private readonly int columns;
         private readonly int cardWidth;
         private readonly int cardHeight;
+
         private readonly Dictionary<string, Bitmap> cardImages;
 
         public SpriteSheetLoader(string filePath, int rows, int columns)
@@ -18,8 +19,10 @@ namespace GuessTheCard
             spriteSheet = new Bitmap(filePath);
             this.rows = rows;
             this.columns = columns;
+
             cardWidth = spriteSheet.Width / columns;
             cardHeight = spriteSheet.Height / rows;
+
             cardImages = new Dictionary<string, Bitmap>();
 
             SliceSpriteSheet();
@@ -27,35 +30,65 @@ namespace GuessTheCard
 
         private void SliceSpriteSheet()
         {
+            // Suits match your FormStart.cs logic
             string[] suits = { "Diamonds", "Hearts", "Spades", "Clubs" };
-            string[] ranks = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "Back1", "Back2" };
 
-            int index = 0;
+            // Ranks match your FormStart.cs logic
+            string[] ranks =
+            {
+                "A", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                "J", "Q", "K", "Back1", "Back2"
+            };
+
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < columns; col++)
                 {
-                    Rectangle cropArea = new Rectangle(col * cardWidth, row * cardHeight, cardWidth, cardHeight);
+                    Rectangle cropArea = new Rectangle(
+                        col * cardWidth,
+                        row * cardHeight,
+                        cardWidth,
+                        cardHeight
+                    );
+
                     Bitmap card = spriteSheet.Clone(cropArea, spriteSheet.PixelFormat);
 
-                    string key = $"{ranks[col]}_of_{suits[row]}";
-                    cardImages[key] = card;
+                    string rank = ranks[col];
+                    string suit = suits[row];
 
-                    index++;
+                    string key = rank + "_of_" + suit;
+
+                    if (!cardImages.ContainsKey(key))
+                    {
+                        cardImages.Add(key, card);
+                    }
                 }
             }
         }
 
         public Bitmap GetCard(string rank, string suit)
         {
-            string key = $"{rank}_of_{suit}";
-            return cardImages.ContainsKey(key) ? cardImages[key] : null;
+            string key = rank + "_of_" + suit;
+
+            if (cardImages.ContainsKey(key))
+            {
+                return cardImages[key];
+            }
+
+            return null;
         }
 
         public Bitmap GetCardBack(int backIndex = 1)
         {
-            string key = backIndex == 2 ? "Back2_of_Diamonds" : "Back1_of_Diamonds";
-            return cardImages.ContainsKey(key) ? cardImages[key] : null;
+            string rank = backIndex == 2 ? "Back2" : "Back1";
+            string key = rank + "_of_Diamonds"; // Back images stored in first row
+
+            if (cardImages.ContainsKey(key))
+            {
+                return cardImages[key];
+            }
+
+            return null;
         }
     }
 }
