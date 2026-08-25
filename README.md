@@ -24,13 +24,13 @@ The game tracks wins and losses and provides a clean, simple UI for casual play.
 
 ## Features
 
- • Three difficulty modes
- • Random card generation
- • Win/loss tracking
- • Clean WinForms UI
- • Card images rendered from PNG assets
- • Replay and main menu navigation
- • Help and Settings screens
+ • Three difficulty modes  
+ • Random card generation  
+ • Win/loss tracking  
+ • Clean WinForms UI  
+ • Card images rendered from PNG assets  
+ • Replay and main menu navigation  
+ • Help and Settings screens. 
 
 ---
 
@@ -49,10 +49,10 @@ If you want, I can help you design a screenshot layout.
 
 ## Tech Stack
 
-• C#
-• .NET 6 / WinForms
-• Visual Studio
-• PNG card assets
+• C#  
+• .NET 6 / WinForms  
+• Visual Studio  
+• PNG card assets  
 
 ---
 
@@ -79,25 +79,24 @@ Generate project diagram
 
 ## Installation & Running
 
-1. Clone the repository:git clone https://github.com/yourusername/Guess-The-Card-Windows.git
-
-2. Open the solution in Visual Studio
-3. Build the project
-4. Run the application
-5. Choose a difficulty and start guessing!
+1. Clone the repository:git clone https://github.com/yourusername/Guess-The-Card-Windows.git  
+2. Open the solution in Visual Studio  
+3. Build the project  
+4. Run the application  
+5. Choose a difficulty and start guessing!  
 
 
 ---
 
 ## Future Improvements
 
-• Add sound effects
-• Add animations for card reveal
-• Add a "streak" counter
-• Add a leaderboard
-• Add custom themes
-• Add a full 52-card deck option
-• Add keyboard controls
+• Add sound effects  
+• Add animations for card reveal  
+• Add a "streak" counter  
+• Add a leaderboard  
+• Add custom themes  
+• Add a full 52-card deck option  
+• Add keyboard controls  
 
 
 If you want, I can help you build a feature roadmap.
