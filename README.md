@@ -52,9 +52,12 @@ If you want, I can help you design a screenshot layout.
 ## Tech Stack
 
  C#
+
  .NET 6 / WinForms
+
  Visual Studio
- PNG card assets
+
+PNG card assets
 
 
 
