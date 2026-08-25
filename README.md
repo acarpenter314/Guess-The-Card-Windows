@@ -39,8 +39,10 @@ The game tracks wins and losses and provides a clean, simple UI for casual play.
 (Add your screenshots here once you capture them)
 You can include images like:
 
-![Gameplay Screenshot](Screenshots/gameplay.png)
-![Main Menu](Screenshots/menu.png)
+Screenshots will be added soon.
+
+![Placeholder](Screenshots/placeholder.png)
+
 
 
 If you want, I can help you design a screenshot layout.
