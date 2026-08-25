@@ -20,7 +20,7 @@ The player attempts to guess the dealer's hidden card based on the selected diff
 
 The game tracks wins and losses and provides a clean, simple UI for casual play.
 
-
+---
 
 ## Features
 
@@ -32,7 +32,7 @@ The game tracks wins and losses and provides a clean, simple UI for casual play.
  Replay and main menu navigation
  Help and Settings screens
 
-
+---
 
 ## Screenshots
 
@@ -45,7 +45,7 @@ You can include images like:
 
 If you want, I can help you design a screenshot layout.
 
-
+---
 
 ## Tech Stack
 
@@ -57,7 +57,7 @@ If you want, I can help you design a screenshot layout.
 
 PNG card assets
 
-
+---
 
 ## Project Structure
 --------------------
@@ -80,7 +80,7 @@ Generate project diagram
 
 ---
 
-## ๐ Installation & Running
+## Installation & Running
 
 1. Clone the repository:git clone https://github.com/yourusername/Guess-The-Card-Windows.git
 
@@ -92,27 +92,27 @@ Generate project diagram
 
 ---
 
-## ๐ฎ Future Improvements
+## Future Improvements
 
-โข Add sound effects
-โข Add animations for card reveal
-โข Add a โstreakโ counter
-โข Add a leaderboard
-โข Add custom themes
-โข Add a full 52โcard deck option
-โข Add keyboard controls
+1. Add sound effects
+2. Add animations for card reveal
+3. Add a โstreakโ counter
+4. Add a leaderboard
+5. Add custom themes
+6. Add a full 52โcard deck option
+7. Add keyboard controls
 
 
 If you want, I can help you build a feature roadmap.
 
 ---
 
-## ๐ License
+## License
 
 This project is licensed under the MIT License.
 
 ---
 
-## ๐ Author
+## Author
 
 Created by Allan โ Windows developer, designer, and creative builder.
