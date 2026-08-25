@@ -96,7 +96,7 @@ Generate project diagram
 
 1. Add sound effects
 2. Add animations for card reveal
-3. Add a streak-counter
+3. Add a "streak" counter
 4. Add a leaderboard
 5. Add custom themes
 6. Add a full 52-card deck option
