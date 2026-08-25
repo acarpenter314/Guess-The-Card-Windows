@@ -59,17 +59,17 @@ If you want, I can help you design a screenshot layout.
 ## Project Structure
 --------------------
 
-Guess-The-Card-Windows/
-|
-|-- Cards/                 # Card images (suits, values, full deck)
-|
-|-- FormIntro.cs           # Main menu + difficulty selection
-|-- FormStart.cs           # Game logic + card reveal
-|-- FormSettings.cs        # Settings screen
-|-- FormHelp.cs            # Help screen
-|-- Program.cs             # Application entry point
-|
-`-- README.md              # Project documentation
+Guess-The-Card-Windows/  
+|  
+|-- Cards/                 # Card images (suits, values, full deck)  
+|  
+|-- FormIntro.cs           # Main menu + difficulty selection  
+|-- FormStart.cs           # Game logic + card reveal  
+|-- FormSettings.cs        # Settings screen  
+|-- FormHelp.cs            # Help screen  
+|-- Program.cs             # Application entry point  
+|  
+`-- README.md              # Project documentation  
 
 
 If you want a diagram-style project map, I can generate one:
