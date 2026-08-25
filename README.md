@@ -96,10 +96,10 @@ Generate project diagram
 
 1. Add sound effects
 2. Add animations for card reveal
-3. Add a โstreakโ counter
+3. Add a streak-counter
 4. Add a leaderboard
 5. Add custom themes
-6. Add a full 52โcard deck option
+6. Add a full 52-card deck option
 7. Add keyboard controls
 
 
@@ -115,4 +115,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Created by Allan โ Windows developer, designer, and creative builder.
+Created by Allan - Windows developer, designer, and creative builder.
