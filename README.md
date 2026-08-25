@@ -13,9 +13,9 @@
 Guess The Card is a simple Windows desktop game built in C# and WinForms.
 The player attempts to guess the dealer's hidden card based on the selected difficulty level:
 
- Easy - Guess the suit
- Medium - Guess the face value
- Hard - Guess both suit and value (full deck)
+ • Easy - Guess the suit
+ • Medium - Guess the face value
+ • Hard - Guess both suit and value (full deck)
 
 
 The game tracks wins and losses and provides a clean, simple UI for casual play.
@@ -24,13 +24,13 @@ The game tracks wins and losses and provides a clean, simple UI for casual play.
 
 ## Features
 
- Three difficulty modes
- Random card generation
- Win/loss tracking
- Clean WinForms UI
- Card images rendered from PNG assets
- Replay and main menu navigation
- Help and Settings screens
+ • Three difficulty modes
+ • Random card generation
+ • Win/loss tracking
+ • Clean WinForms UI
+ • Card images rendered from PNG assets
+ • Replay and main menu navigation
+ • Help and Settings screens
 
 ---
 
@@ -49,13 +49,10 @@ If you want, I can help you design a screenshot layout.
 
 ## Tech Stack
 
- C#
-
- .NET 6 / WinForms
-
- Visual Studio
-
-PNG card assets
+• C#
+• .NET 6 / WinForms
+• Visual Studio
+• PNG card assets
 
 ---
 
@@ -94,13 +91,13 @@ Generate project diagram
 
 ## Future Improvements
 
-1. Add sound effects
-2. Add animations for card reveal
-3. Add a "streak" counter
-4. Add a leaderboard
-5. Add custom themes
-6. Add a full 52-card deck option
-7. Add keyboard controls
+• Add sound effects
+• Add animations for card reveal
+• Add a "streak" counter
+• Add a leaderboard
+• Add custom themes
+• Add a full 52-card deck option
+• Add keyboard controls
 
 
 If you want, I can help you build a feature roadmap.
