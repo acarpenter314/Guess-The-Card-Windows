@@ -1,4 +1,4 @@
-# Guess The Card โ Windows Edition
+# Guess The Card - Windows Edition
 
 ![C#](https://img.shields.io/badge/C%23-.NET%206-68217A?style=for-the-badge&logo=csharp)
 ![Windows](https://img.shields.io/badge/Windows-WinForms-0078D6?style=for-the-badge&logo=windows)
@@ -6,36 +6,35 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 
----
 
-## ๐ฎ Overview
+
+## Overview
 
 Guess The Card is a simple Windows desktop game built in C# and WinForms.
 The player attempts to guess the dealerโs hidden card based on the selected difficulty level:
 
-โข Easy โ Guess the suit
-โข Medium โ Guess the face value
-โข Hard โ Guess both suit and value (full deck)
+ Easy โ Guess the suit
+ Medium โ Guess the face value
+ Hard โ Guess both suit and value (full deck)
 
 
 The game tracks wins and losses and provides a clean, simple UI for casual play.
 
----
-
-## ๐ Features
-
-โข Three difficulty modes
-โข Random card generation
-โข Win/loss tracking
-โข Clean WinForms UI
-โข Card images rendered from PNG assets
-โข Replay and main menu navigation
-โข Help and Settings screens
 
 
----
+## Features
 
-## ๐ธ Screenshots
+ Three difficulty modes
+ Random card generation
+ Win/loss tracking
+ Clean WinForms UI
+ Card images rendered from PNG assets
+ Replay and main menu navigation
+ Help and Settings screens
+
+
+
+## Screenshots
 
 (Add your screenshots here once you capture them)
 You can include images like:
