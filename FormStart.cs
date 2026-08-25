@@ -1,208 +1,123 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
-using Image = System.Drawing.Image;
 
 namespace Guess_The_Card
 {
     public partial class FormStart : Form
     {
-        // Initialize variables
+        private SpriteSheetLoader cardLoader;
+
+        // Game state
         public static int winner = 0;
-        public static string userCard = "";
-        public string dealerCard = "";
+        public static string userRank = "";
+        public static string userSuit = "";
+        public string dealerRank = "";
+        public string dealerSuit = "";
 
-        // Array for Easy difficulty
-        string[] suit = { "Hearts.png", "Diamonds.png", "Spades.png", "Clubs.png" };
-
-        // Array for Medium difficulty
-        string[] facevalue =
-        {
-            "Ace.png", "Two.png", "Three.png", "Four.png", "Five.png",
-            "Six.png", "Seven.png", "Eight.png", "Nine.png", "Ten.png"
-        };
-
-        // Array for Hard difficulty
-        string[] suitface =
-        {
-            "AceSpades.png", "TwoSpades.png", "ThreeSpades.png", "FourSpades.png",
-            "FiveSpades.png", "SixSpades.png", "SevenSpades.png", "EightSpades.png",
-            "NineSpades.png", "TenSpades.png",
-            "AceClubs.png", "TwoClubs.png", "ThreeClubs.png", "FourClubs.png",
-            "FiveClubs.png", "SixClubs.png", "SevenClubs.png", "EightClubs.png",
-            "NineClubs.png", "TenClubs.png",
-            "AceHearts.png", "TwoHearts.png", "ThreeHearts.png", "FourHearts.png",
-            "FiveHearts.png", "SixHearts.png", "SevenHearts.png", "EightHearts.png",
-            "NineHearts.png", "TenHearts.png",
-            "AceDiamonds.png", "TwoDiamonds.png", "ThreeDiamonds.png", "FourDiamonds.png",
-            "FiveDiamonds.png", "SixDiamonds.png", "SevenDiamonds.png", "EightDiamonds.png",
-            "NineDiamonds.png", "TenDiamonds.png"
-        };
+        // Rank and suit arrays
+        private readonly string[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
+        private readonly string[] ranks = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
         public FormStart()
         {
             InitializeComponent();
-            Random random = new Random(); // create a random variable
 
-            // Determines what to do based on what difficulty has been selected in FormIntro
+            // Load sprite sheet
+            cardLoader = new SpriteSheetLoader("Cards/cards.png", 4, 14);
+
+            Random random = new Random();
+
+            // Difficulty selection
             if (FormIntro.difficulty == 0)
             {
-                dealerCard = Convert.ToString(suit[random.Next(suit.Length)]);
+                // Easy: guess suit only
+                dealerSuit = suits[random.Next(suits.Length)];
+                dealerRank = "Back1"; // suit only
                 groupBoxSuit.Visible = true;
                 groupBoxValue.Visible = false;
             }
-
             else if (FormIntro.difficulty == 1)
             {
-                dealerCard = Convert.ToString(facevalue[random.Next(facevalue.Length)]);
+                // Medium: guess rank only
+                dealerRank = ranks[random.Next(ranks.Length)];
+                dealerSuit = "Hearts"; // rank only
                 groupBoxSuit.Visible = false;
                 groupBoxValue.Visible = true;
             }
             else if (FormIntro.difficulty == 2)
             {
-                dealerCard = Convert.ToString(suitface[random.Next(suitface.Length)]);
+                // Hard: guess rank and suit
+                dealerSuit = suits[random.Next(suits.Length)];
+                dealerRank = ranks[random.Next(ranks.Length)];
                 groupBoxSuit.Visible = true;
                 groupBoxValue.Visible = true;
             }
-
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            // Exit Application when button is clicked
             Environment.Exit(1);
         }
 
         private void buttonReveal_Click(object sender, EventArgs e)
         {
-            // Assign a random image to pictureBoxCard
-            pictureBoxCard.Image = Image.FromFile($"../../../Cards/{dealerCard}");
-            pictureBoxCover.Visible = false; // Hide picturebox
-            pictureBoxCard.Visible = true; // Show picturebox
+            // Reveal dealer card
+            pictureBoxCard.Image = cardLoader.GetCard(dealerRank, dealerSuit);
+            pictureBoxCover.Visible = false;
+            pictureBoxCard.Visible = true;
 
-            // Check which radiobutton has been checked for Easy difficulty
+            // Easy mode: suit only
             if (FormIntro.difficulty == 0)
             {
-                if (this.radioButtonClubs.Checked)
-                {
-                    userCard = "Clubs.png";
-                }
-                else if (this.radioButtonDiamonds.Checked)
-                {
-                    userCard = "Diamonds.png";
-                }
-                else if (this.radioButtonHearts.Checked)
-                {
-                    userCard = "Hearts.png";
-                }
-                else if (this.radioButtonSpades.Checked)
-                {
-                    userCard = "Spades.png";
-                }
+                if (radioButtonClubs.Checked) userSuit = "Clubs";
+                if (radioButtonDiamonds.Checked) userSuit = "Diamonds";
+                if (radioButtonHearts.Checked) userSuit = "Hearts";
+                if (radioButtonSpades.Checked) userSuit = "Spades";
 
+                userRank = "Back1";
             }
 
-            // Check which radiobutton has been checked for Medium difficulty
+            // Medium mode: rank only
             else if (FormIntro.difficulty == 1)
             {
-                if (this.radioButtonAce.Checked)
-                {
-                    userCard = "Ace.png";
-                }
-                else if (this.radioButtonTwo.Checked)
-                {
-                    userCard = "Two.png";
-                }
-                else if (this.radioButtonThree.Checked)
-                {
-                    userCard = "Three.png";
-                }
-                else if (this.radioButtonFour.Checked)
-                {
-                    userCard = "Four.png";
-                }
-                else if (this.radioButtonFive.Checked)
-                {
-                    userCard = "Five.png";
-                }
-                else if (this.radioButtonSix.Checked)
-                {
-                    userCard = "Six.png";
-                }
-                else if (this.radioButtonSeven.Checked)
-                {
-                    userCard = "Seven.png";
-                }
-                else if (this.radioButtonEight.Checked)
-                {
-                    userCard = "Eight.png";
-                }
-                else if (this.radioButtonNine.Checked)
-                {
-                    userCard = "Nine.png";
-                }
-                else if (this.radioButtonTen.Checked)
-                {
-                    userCard = "Ten.png";
-                }
+                if (radioButtonAce.Checked) userRank = "A";
+                if (radioButtonTwo.Checked) userRank = "2";
+                if (radioButtonThree.Checked) userRank = "3";
+                if (radioButtonFour.Checked) userRank = "4";
+                if (radioButtonFive.Checked) userRank = "5";
+                if (radioButtonSix.Checked) userRank = "6";
+                if (radioButtonSeven.Checked) userRank = "7";
+                if (radioButtonEight.Checked) userRank = "8";
+                if (radioButtonNine.Checked) userRank = "9";
+                if (radioButtonTen.Checked) userRank = "10";
+
+                userSuit = "Hearts";
             }
 
-            // Check which radio button has been checked for Hard Difficulty
-            if (FormIntro.difficulty == 2)
+            // Hard mode: rank and suit
+            else if (FormIntro.difficulty == 2)
             {
-                if (this.radioButtonAce.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "AceClubs.png";
-                }
-                else if (this.radioButtonTwo.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "TwoClubs.png";
-                }
-                else if (this.radioButtonThree.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "ThreeClubs.png";
-                }
-                else if (this.radioButtonFour.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "FourClubs.png";
-                }
-                else if (this.radioButtonFive.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "FiveClubs.png";
-                }
-                else if (this.radioButtonSix.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "SixClubs.png";
-                }
-                else if (this.radioButtonSeven.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "SevenClubs.png";
-                }
-                else if (this.radioButtonEight.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "EightClubs.png";
-                }
-                else if (this.radioButtonNine.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "NineClubs.png";
-                }
-                else if (this.radioButtonTen.Checked && radioButtonClubs.Checked)
-                {
-                    userCard = "TenClubs.png";
-                }
+                if (radioButtonAce.Checked) userRank = "A";
+                if (radioButtonTwo.Checked) userRank = "2";
+                if (radioButtonThree.Checked) userRank = "3";
+                if (radioButtonFour.Checked) userRank = "4";
+                if (radioButtonFive.Checked) userRank = "5";
+                if (radioButtonSix.Checked) userRank = "6";
+                if (radioButtonSeven.Checked) userRank = "7";
+                if (radioButtonEight.Checked) userRank = "8";
+                if (radioButtonNine.Checked) userRank = "9";
+                if (radioButtonTen.Checked) userRank = "10";
+
+                if (radioButtonClubs.Checked) userSuit = "Clubs";
+                if (radioButtonDiamonds.Checked) userSuit = "Diamonds";
+                if (radioButtonHearts.Checked) userSuit = "Hearts";
+                if (radioButtonSpades.Checked) userSuit = "Spades";
             }
 
-            // Determine if the user has guessed the right card
-            if (dealerCard == userCard)
+            // Win or lose
+            if (dealerRank == userRank && dealerSuit == userSuit)
             {
                 winner = 1;
                 FormIntro.winCount++;
@@ -216,7 +131,7 @@ namespace Guess_The_Card
                 labelLossCount.Text = FormIntro.lossCount.ToString();
                 MessageBox.Show("You Lose!");
             }
-            // Hide Reveal button and Show Play Again button
+
             buttonReveal.Visible = false;
             buttonPlayAgain.Visible = true;
         }
@@ -224,17 +139,17 @@ namespace Guess_The_Card
         private void buttonMainScreen_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormIntro myForm = new FormIntro(); // Create the new form object
-            myForm.ShowDialog(); // Show the new form
+            FormIntro myForm = new FormIntro();
+            myForm.ShowDialog();
         }
 
         private void buttonPlayAgain_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormStart myForm = new FormStart(); // Create the new form object
-            myForm.ShowDialog(); // Show the new form
-            buttonReveal.Visible = true; // Show Reveal button
-            buttonPlayAgain.Visible = false; // Hide Play Again button
+            FormStart myForm = new FormStart();
+            myForm.ShowDialog();
+            buttonReveal.Visible = true;
+            buttonPlayAgain.Visible = false;
         }
     }
 }
