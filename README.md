@@ -14,9 +14,7 @@ Guess The Card is a simple Windows desktop game built in C# and WinForms.
 The player attempts to guess the dealer's hidden card based on the selected difficulty level:
 
  Easy - Guess the suit
-
  Medium - Guess the face value
-
  Hard - Guess both suit and value (full deck)
 
 
