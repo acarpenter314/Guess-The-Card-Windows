@@ -1,2 +1,116 @@
-# Guess-The-Card-Windows-
-A simple game to guess what is the card between ace and 10 or guess the suit or guess both depending on the difficulty level. It is written in C#.
+# Guess The Card โ Windows Edition
+
+![C#](https://img.shields.io/badge/C%23-.NET%206-68217A?style=for-the-badge&logo=csharp)
+![Windows](https://img.shields.io/badge/Windows-WinForms-0078D6?style=for-the-badge&logo=windows)
+![Status](https://img.shields.io/badge/Status-Complete-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+
+---
+
+## ๐ฎ Overview
+
+Guess The Card is a simple Windows desktop game built in C# and WinForms.
+The player attempts to guess the dealerโs hidden card based on the selected difficulty level:
+
+โข Easy โ Guess the suit
+โข Medium โ Guess the face value
+โข Hard โ Guess both suit and value (full deck)
+
+
+The game tracks wins and losses and provides a clean, simple UI for casual play.
+
+---
+
+## ๐ Features
+
+โข Three difficulty modes
+โข Random card generation
+โข Win/loss tracking
+โข Clean WinForms UI
+โข Card images rendered from PNG assets
+โข Replay and main menu navigation
+โข Help and Settings screens
+
+
+---
+
+## ๐ธ Screenshots
+
+(Add your screenshots here once you capture them)
+You can include images like:
+
+![Gameplay Screenshot](Screenshots/gameplay.png)
+![Main Menu](Screenshots/menu.png)
+
+
+If you want, I can help you design a screenshot layout.
+
+---
+
+## ๐ ๏ธ Tech Stack
+
+โข C#
+โข .NET 6 / WinForms
+โข Visual Studio
+โข PNG card assets
+
+
+---
+
+## ๐ Project Structure
+
+Guess-The-Card-Windows/
+โ
+โโโ Cards/                 # Card images (suits, values, full deck)
+โ
+โโโ FormIntro.cs           # Main menu + difficulty selection
+โโโ FormStart.cs           # Game logic + card reveal
+โโโ FormSettings.cs        # Settings screen
+โโโ FormHelp.cs            # Help screen
+โโโ Program.cs             # Application entry point
+โ
+โโโ README.md              # Project documentation
+
+
+If you want a diagram-style project map, I can generate one:
+Generate project diagram
+
+---
+
+## ๐ Installation & Running
+
+1. Clone the repository:git clone https://github.com/yourusername/Guess-The-Card-Windows.git
+
+2. Open the solution in Visual Studio
+3. Build the project
+4. Run the application
+5. Choose a difficulty and start guessing!
+
+
+---
+
+## ๐ฎ Future Improvements
+
+โข Add sound effects
+โข Add animations for card reveal
+โข Add a โstreakโ counter
+โข Add a leaderboard
+โข Add custom themes
+โข Add a full 52โcard deck option
+โข Add keyboard controls
+
+
+If you want, I can help you build a feature roadmap.
+
+---
+
+## ๐ License
+
+This project is licensed under the MIT License.
+
+---
+
+## ๐ Author
+
+Created by Allan โ Windows developer, designer, and creative builder.
