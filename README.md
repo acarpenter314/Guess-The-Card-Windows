@@ -60,9 +60,7 @@ PNG card assets
 
 
 ## Project Structure
-
-Project Structure
------------------
+--------------------
 
 Guess-The-Card-Windows/
 |
